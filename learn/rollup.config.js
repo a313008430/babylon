@@ -17,7 +17,7 @@ export default {
         format: 'umd',
         name: 'App',//umd入口
         globals:{
-            // 'three':'THREE',              //告诉rollup 全局变量THREE即是three'
+            // 'babylonjs':'BABYLON',              //告诉rollup 全局变量THREE即是three'
         }
     }
     
