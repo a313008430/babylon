@@ -15,7 +15,7 @@ export default {
         file: './dist/index.js',
         sourcemap: 'inline',
         format: 'umd',
-        name: 'App',//umd入口
+        name: 'Game',//umd入口
         globals:{
             // 'babylonjs':'BABYLON',              //告诉rollup 全局变量THREE即是three'
         }
