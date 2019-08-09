@@ -1,5 +1,4 @@
 import Core from "../core/Core";
-import { GameConfig } from "./GameConfig";
 
 /**
  * 游戏逻辑
@@ -7,7 +6,6 @@ import { GameConfig } from "./GameConfig";
 export default class Game {
 
     constructor() {
-        
     }
 }
 

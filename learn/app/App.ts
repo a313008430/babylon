@@ -1,5 +1,6 @@
 import Game from "./logic/Game";
 import { GameConfig } from "./logic/GameConfig";
+import Core from "./core/Core";
 
 /**
  * 项目入口
@@ -16,6 +17,9 @@ export default class App {
     private box: BABYLON.Mesh;
 
     constructor() {
+
+        Core.init();//初始化核心库
+
         this.scene = this.createScene();
         new Game;
      
