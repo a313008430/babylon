@@ -1,6 +1,7 @@
 import Game from "./logic/Game";
 import { GameConfig } from "./logic/GameConfig";
 import Core from "./core/Core";
+import test from "./logic/test";
 
 /**
  * 项目入口
@@ -22,8 +23,14 @@ export default class App {
 
         this.scene = this.createScene();
         new Game;
+
+       var tt2 = new test(1);
+       var tt = new test(2);
+
+        window['t'] = Core;
+        window['tt'] = tt;
      
-        console.log(Game.name)
+        // console.log(Game.name)
 
         //  渲染
         this.engine.runRenderLoop(() => {
@@ -40,7 +47,7 @@ export default class App {
 
 
         BABYLON.SceneLoader.Append('./res/', 'majiangjiang.glb', this.scene, (container) => {
-            console.log(container);
+            // console.log(container);
             this.scene.activeCamera = container.cameras[1];
             let desk = this.scene.getNodeByName('desk') as BABYLON.Mesh;
 
