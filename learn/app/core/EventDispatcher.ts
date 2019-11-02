@@ -39,7 +39,7 @@ export default class EventDispatcher {
         }
 
         //保证方法的唯一性
-        console.error('事件容错处理')
+        // console.error('事件容错处理')
         let keys: string[] = Object.keys(caller.__proto__);
         for (let x = keys.length - 1; x > -1; x--) {
             if (caller[keys[x]] === listener) {
