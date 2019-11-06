@@ -1,7 +1,5 @@
+import { INode, Event, IImage, IButton } from "../../core/Core";
 import Game from "../Game";
-import Core from "../../core/Core";
-import EventMap from "../../core/EventMap";
-import Node from "../../core/Node";
 
 export default class EntranceView {
     constructor() {
@@ -9,17 +7,13 @@ export default class EntranceView {
     }
 
     async init() {
-        let node = await Core.node.createImage('background', './res/fangjian028.png')
-        Game.rootBox.addControl(node);
-        // node = await Core.node.createImage('icon', './res/fish03.png');
-
-        let img = new BABYLON.GUI.Image('icon', './res/fish03.png');
-        // img.stretch = BABYLON.GUI.Image.STRETCH_NONE;//缩放容器以适应图像大小。
-        img.onImageLoadedObservable.addOnce(() => {
-            img.width = img.domImage.width + 'px';
-            img.height = img.domImage.height + 'px';
-        })
+        let node = new INode(),
+            img = new IImage('background', './res/fangjian028.png');
         node.addControl(img);
-        // console.log(node.('icon'))
+        Game.rootBox.addControl(node);
+
+        let btn = IButton.CreateImageOnlyButton('btn', './res/fish03.png');
+
+        node.addControl(btn);
     }
 }

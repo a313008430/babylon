@@ -1,13 +1,11 @@
 import Game from "./logic/Game";
 import EntranceView from "./logic/view/EntranceView";
-import Core from "./core/Core";
 /**
  * 项目入口
  */
 export default class App {
 
     constructor() {
-        Core.init();
         Game.engineInit();
 
         new EntranceView();

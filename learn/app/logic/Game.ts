@@ -1,5 +1,5 @@
-import Core from "../core/Core";
 import EventMap from "../core/EventMap";
+import { Event } from "../core/Core";
 
 /**
  * 游戏逻辑
@@ -132,7 +132,7 @@ export default class Game {
         this.rootBox.scaleY = this.scaleRatio;
         this.rootBox.width = 1 / this.scaleRatio;
 
-        Core.event.event(EventMap.RESIZE, this.scaleRatio);
+        Event.event(EventMap.RESIZE, this.scaleRatio);
 
         this.engine.resize();
     }

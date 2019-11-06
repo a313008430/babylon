@@ -1,24 +1,13 @@
-import Component from "./Component";
-import GameObjectManager from "./GameObjectManager";
-import EventDispatcher from "./EventDispatcher";
-import Node from "./Node";
+import EventDispatcher from './EventDispatcher';
+
 /**
  * 核心模块入口
  */
-export default class Core {
-    /** 组件 */
-    static component = Component;
-    /** 游戏类管理 */
-    static gameManage: GameObjectManager;
-    /** 事件中介 */
-    static event: EventDispatcher;
-    /** 创建Node节点 */
-    static get node() {
-        return Node;
-    }
 
-    static init() {
-        this.gameManage = new GameObjectManager();
-        this.event = new EventDispatcher();
-    }
-}
+export { default as INode } from './INode';
+export { default as IButton } from './IButton';
+export { default as IImage } from './IImage';
+export { default as IControl } from './IControl';
+export { default as Component } from './Component';
+export const Event = new EventDispatcher();
+
